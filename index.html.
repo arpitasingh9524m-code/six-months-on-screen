@@ -1,0 +1,433 @@
+# six-months-on-screen
+A cinematic little universe celebrating six months of Kishmish × Yuvi. Two characters, countless memories, one unfinished love story. 🎬❤️
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Plot Twist | Kishmish × Yuvi</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root{
+ --black:#080708;
+ --wine:#651c2b;
+ --red:#a53d50;
+ --pink:#d9a0aa;
+ --white:#f3e9e7;
+ --grey:#9b898d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ background:var(--black);color:var(--white);
+ font-family:'DM Sans',sans-serif;
+ overflow-x:hidden;
+}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif}
+button{font-family:inherit;cursor:pointer}
+section{
+ min-height:100vh;padding:100px 22px;
+ display:flex;align-items:center;justify-content:center;
+ flex-direction:column;text-align:center;position:relative;
+}
+p{color:var(--grey);line-height:1.9}
+.eyebrow{
+ font-size:10px;letter-spacing:5px;color:var(--pink);
+ text-transform:uppercase;
+}
+h1{font-size:clamp(4rem,12vw,9rem);font-weight:400;line-height:.9}
+h2{font-size:clamp(2.7rem,8vw,5rem);font-weight:400}
+.accent{color:var(--pink);font-style:italic}
+.line{height:1px;width:55px;background:var(--red);margin:25px auto}
+.btn{
+ padding:15px 28px;background:var(--red);
+ color:white;border:1px solid var(--red);
+ letter-spacing:2px;font-size:10px;
+ transition:.3s;margin:10px;
+}
+.btn:hover{background:transparent;transform:translateY(-3px)}
+.outline{
+ padding:14px 26px;background:transparent;
+ border:1px solid #75505a;color:var(--white);
+ letter-spacing:2px;font-size:10px;margin:10px;
+}
+.hero{
+ background:radial-gradient(ellipse at center,#481722 0%,#1b0d12 40%,#080708 78%);
+}
+.hero h1{margin:35px 0}
+.hero p{font-size:12px;letter-spacing:2px}
+.hero .date{margin-top:35px;color:var(--pink)}
+.nav{
+ position:fixed;top:0;left:0;width:100%;z-index:20;
+ padding:18px 7%;display:flex;justify-content:space-between;
+ background:#080708df;backdrop-filter:blur(12px);
+ border-bottom:1px solid #ffffff12;
+}
+.nav span{font-size:10px;letter-spacing:3px;color:var(--pink)}
+.nav button{background:none;border:0;color:white;font-size:10px}
+.dark{background:#0d090b}
+.wine{
+ background:radial-gradient(ellipse at center,#301119,#080708 75%);
+}
+.quote{
+ font-family:'Cormorant Garamond',serif;
+ font-size:clamp(24px,5vw,40px);
+ font-style:italic;color:var(--white);
+ max-width:750px;margin:30px auto;
+}
+.card{
+ background:#140e11;border:1px solid #55303a;
+ max-width:650px;width:100%;padding:35px;margin-top:30px;
+}
+.card h3{font-size:35px;color:var(--pink);margin:10px}
+.card p{font-size:12px}
+.chapter-list{
+ max-width:700px;width:100%;display:grid;
+ gap:12px;margin-top:40px;
+}
+.chapter{
+ display:flex;align-items:center;text-align:left;
+ gap:20px;width:100%;padding:20px;
+ color:var(--white);background:#120e10;
+ border:1px solid #39262d;transition:.3s;
+}
+.chapter:hover{border-color:var(--red);background:#28131a}
+.chapter .num{font-family:'Cormorant Garamond';font-size:40px;color:var(--red)}
+.chapter .details{flex:1}
+.chapter h3{font-size:24px;font-weight:400}
+.chapter p{font-size:9px;letter-spacing:2px}
+.chapter .arrow{color:var(--pink)}
+.popup{
+ display:none;position:fixed;inset:0;z-index:40;
+ background:#000e;align-items:center;justify-content:center;
+ padding:20px;
+}
+.popup.show{display:flex}
+.popup-inner{
+ max-width:570px;width:100%;background:#1b1015;
+ border:1px solid #9d5263;padding:40px 25px;
+}
+.popup-inner h2{color:var(--pink);margin:20px 0}
+.close{background:none;border:0;color:var(--pink);margin-top:30px;letter-spacing:3px}
+.grid{
+ display:grid;grid-template-columns:repeat(2,1fr);
+ max-width:750px;width:100%;gap:14px;margin-top:35px;
+}
+.reason{
+ padding:25px 15px;background:#150e12;
+ border:1px solid #402630;
+}
+.reason h3{color:var(--pink);font-size:25px;margin-bottom:10px}
+.reason p{font-size:12px}
+.counter{
+ font-family:'Cormorant Garamond';font-size:100px;
+ color:var(--pink);margin:20px;
+}
+.question{
+ max-width:550px;width:100%;padding:35px;
+ border:1px solid #613440;background:#150e12;margin-top:30px;
+}
+.question h3{font-size:35px;margin-bottom:20px}
+.answer{color:var(--pink);margin-top:20px;min-height:30px}
+.letter{
+ max-width:650px;width:100%;padding:40px 30px;
+ background:#160f12;border:1px solid #6c3b47;margin-top:30px;
+}
+.letter p{
+ font-family:'Cormorant Garamond',serif;
+ font-size:22px;color:var(--white);margin:15px 0;
+}
+.hidden{display:none}
+.hidden.show{display:block}
+.final{
+ background:radial-gradient(ellipse at center,#571c2a,#180b10 45%,#080708 80%);
+}
+.final h1{margin:35px 0;color:var(--pink)}
+.final .last{
+ font-family:'Cormorant Garamond';font-size:29px;
+ font-style:italic;color:var(--white);margin:25px 0;
+}
+footer{text-align:center;padding:25px;color:#78666c;font-size:10px;letter-spacing:3px}
+.floating{
+ position:fixed;bottom:-30px;color:#a64d60;
+ pointer-events:none;animation:float 9s linear infinite;
+ opacity:.35;z-index:0;
+}
+@keyframes float{
+ to{transform:translateY(-110vh) rotate(40deg);opacity:0}
+}
+.reveal{
+ animation:reveal 1s ease both;
+}
+@keyframes reveal{
+ from{opacity:0;transform:translateY(25px)}
+ to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:550px){
+ .grid{grid-template-columns:1fr}
+ section{padding:90px 20px}
+ .card,.letter{padding:25px 18px}
+ .chapter{gap:12px;padding:14px}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+ <span>K × Y · THE ORIGINAL</span>
+ <button onclick="window.scrollTo({top:0,behavior:'smooth'})">REWIND ↗</button>
+</nav>
+
+<!-- OPENING SCENE -->
+<section class="hero" id="home">
+ <p class="eyebrow">A story written by two people</p>
+ <h1>THE PLOT<br><span class="accent">TWIST.</span></h1>
+ <p>STARRING KISHMISH & YUVI</p>
+ <div class="line"></div>
+ <p>Somewhere between coincidence and destiny.</p>
+ <p class="date">13 MAY 2026 — 13 NOVEMBER 2026</p>
+ <button class="btn" onclick="begin()">ENTER OUR UNIVERSE →</button>
+ <p style="margin-top:60px;font-size:9px">SCROLL TO DISCOVER THE STORY</p>
+</section>
+
+<!-- SCENE 1 -->
+<section class="wine" id="beginning">
+ <p class="eyebrow">Scene 001 · The unexpected</p>
+ <h2>And then,<br><span class="accent">there was you.</span></h2>
+ <div class="line"></div>
+ <p class="quote">"I never knew an ordinary date could become a reason to celebrate."</p>
+ <div class="card">
+  <p>THE DAY OUR STORY BEGAN</p>
+  <h3>13 · 05 · 2026</h3>
+  <p>Not a perfect movie. Not a scripted story. Just two people beginning something new.</p>
+ </div>
+</section>
+
+<!-- SCENE 2 -->
+<section class="dark">
+ <p class="eyebrow">Scene 002 · The characters</p>
+ <h2>Meet the main<br><span class="accent">characters.</span></h2>
+ <div class="grid">
+  <div class="reason">
+   <p>THE GIRL</p>
+   <h3>Kishmish</h3>
+   <p>The storyteller, the romantic, the one behind this entire production.</p>
+  </div>
+  <div class="reason">
+   <p>THE BOY</p>
+   <h3>Yuvi</h3>
+   <p>The singer, the mystery, the boy who became part of her story.</p>
+  </div>
+ </div>
+ <p style="margin-top:35px">Together: a slightly chaotic production. ❤️</p>
+</section>
+
+<!-- SCENE 3 -->
+<section class="wine">
+ <p class="eyebrow">Scene 003 · Six chapters</p>
+ <h2>Six months.<br><span class="accent">Six little worlds.</span></h2>
+ <p>Click each chapter. There's a message waiting.</p>
+ <div class="chapter-list">
+  <button class="chapter" onclick="openScene(1)">
+   <span class="num">01</span>
+   <span class="details"><h3>The First Page</h3><p>MAY · WHERE IT ALL BEGAN</p></span>
+   <span class="arrow">↗</span>
+  </button>
+  <button class="chapter" onclick="openScene(2)">
+   <span class="num">02</span>
+   <span class="details"><h3>The Little Things</h3><p>JUNE · DISCOVERING EACH OTHER</p></span>
+   <span class="arrow">↗</span>
+  </button>
+  <button class="chapter" onclick="openScene(3)">
+   <span class="num">03</span>
+   <span class="details"><h3>Our Own Language</h3><p>JULY · THE LITTLE MOMENTS</p></span>
+   <span class="arrow">↗</span>
+  </button>
+  <button class="chapter" onclick="openScene(4)">
+   <span class="num">04</span>
+   <span class="details"><h3>The Unscripted Parts</h3><p>AUGUST · LEARNING TO UNDERSTAND</p></span>
+   <span class="arrow">↗</span>
+  </button>
+  <button class="chapter" onclick="openScene(5)">
+   <span class="num">05</span>
+   <span class="details"><h3>Between the Scenes</h3><p>SEPTEMBER–OCTOBER · GROWING</p></span>
+   <span class="arrow">↗</span>
+  </button>
+  <button class="chapter" onclick="openScene(6)">
+   <span class="num">06</span>
+   <span class="details"><h3>The Next Chapter</h3><p>NOVEMBER · SIX MONTHS</p></span>
+   <span class="arrow">↗</span>
+  </button>
+ </div>
+</section>
+
+<!-- CHAPTER MODAL -->
+<div class="popup" id="scenePopup">
+ <div class="popup-inner">
+  <p class="eyebrow" id="sceneNumber">SCENE 001</p>
+  <h2 id="sceneTitle">The First Page</h2>
+  <p id="sceneMessage"></p>
+  <button class="close" onclick="closeScene()">CLOSE SCENE ✕</button>
+ </div>
+</div>
+
+<!-- SCENE 4 -->
+<section class="dark">
+ <p class="eyebrow">Scene 004 · The little details</p>
+ <h2>Things that make<br><span class="accent">you, YOU.</span></h2>
+ <div class="grid">
+  <div class="reason">
+   <h3>Your voice.</h3>
+   <p>Especially when you sing.</p>
+  </div>
+  <div class="reason">
+   <h3>Your eyes.</h3>
+   <p>One of my favourite little details.</p>
+  </div>
+  <div class="reason">
+   <h3>Your way.</h3>
+   <p>The way you look at me.</p>
+  </div>
+  <div class="reason">
+   <h3>Your presence.</h3>
+   <p>The difference you make in ordinary moments.</p>
+  </div>
+ </div>
+</section>
+
+<!-- SCENE 5 -->
+<section class="wine">
+ <p class="eyebrow">Scene 005 · A little plot twist</p>
+ <h2>Wait...<br><span class="accent">one question.</span></h2>
+ <div class="question">
+  <p class="eyebrow">THE DIRECTOR WANTS TO KNOW</p>
+  <h3>Would you watch this movie again?</h3>
+  <button class="btn" onclick="answer('Of course! The sequel is already in production. ❤️')">ABSOLUTELY ❤️</button>
+  <button class="outline" onclick="answer('Plot twist: there is no skipping this beautiful chapter. 😌')">SKIP TO THE END</button>
+  <p class="answer" id="answer"></p>
+ </div>
+</section>
+
+<!-- SCENE 6 -->
+<section class="dark">
+ <p class="eyebrow">Scene 006 · A private screening</p>
+ <h2>A message<br><span class="accent">for the lead actor.</span></h2>
+ <p>Yuvi, this scene is exclusively yours.</p>
+ <button class="btn" onclick="revealLetter()">OPEN THE ENVELOPE ✉</button>
+ <div class="letter hidden" id="letter">
+  <p>Dear Yuvi,</p>
+  <p>
+   Happy six months. ❤️
+  </p>
+  <p>
+   If our relationship were a movie, I don't think it would be
+   a perfect romantic film. It would have comedy, unexpected
+   turns, silly moments and scenes we would probably laugh
+   about years later.
+  </p>
+  <p>
+   I love your singing, your eyes, the way you look at me
+   and the little things that make you who you are.
+  </p>
+  <p>
+   I know we won't agree on everything, and that's okay.
+   I hope we continue learning to understand each other,
+   communicating honestly and treating each other with kindness.
+  </p>
+  <p>
+   Thank you for these six months and for being part of
+   a story that means so much to me.
+  </p>
+  <p>With love,</p>
+  <p><span class="accent">Your Kishmish. ❤️</span></p>
+ </div>
+</section>
+
+<!-- ENDING -->
+<section class="final">
+ <p class="eyebrow">The final scene · For now</p>
+ <h1>TO BE<br><span class="accent">CONTINUED.</span></h1>
+ <div class="line"></div>
+ <p>Six months down. A lifetime of stories still unwritten.</p>
+ <p class="last">"The best part of this movie is that we don't know the ending yet."</p>
+ <h2 style="font-size:30px;margin-top:30px">Happy Anniversary, Yuvi.</h2>
+ <p style="margin-top:15px;letter-spacing:3px;font-size:10px">KISHMISH × YUVI</p>
+ <button class="outline" onclick="window.scrollTo({top:0,behavior:'smooth'})">WATCH AGAIN ↗</button>
+</section>
+
+<footer>
+ A KISHMISH PRODUCTION · EST. 13.05.2026 · 2026
+</footer>
+
+<script>
+function begin(){
+ document.getElementById('beginning').scrollIntoView({behavior:'smooth'});
+}
+
+const scenes={
+ 1:{
+  title:"The First Page",
+  message:"13 May 2026. The beginning of a story neither of us had seen before. Six months later, this date has its own little place in our hearts."
+ },
+ 2:{
+  title:"The Little Things",
+  message:"Getting to know someone is a collection of little discoveries. Their habits, their voice, their expressions and all the details that slowly become familiar."
+ },
+ 3:{
+  title:"Our Own Language",
+  message:"The conversations, the silly jokes, the random moments and all those little things that only the two of us understand."
+ },
+ 4:{
+  title:"The Unscripted Parts",
+  message:"Not every scene is easy. Real relationships take patience, honesty, communication and the willingness to understand each other."
+ },
+ 5:{
+  title:"Between the Scenes",
+  message:"Some of the most meaningful moments aren't dramatic. They're the ordinary days, the little conversations and the effort we make for one another."
+ },
+ 6:{
+  title:"The Next Chapter",
+  message:"Six months have passed. This isn't a final goodbye or an ending. It's a little celebration of everything we've experienced and everything we can still learn together."
+ }
+};
+
+function openScene(n){
+ const s=scenes[n];
+ document.getElementById('sceneNumber').innerText='SCENE 00'+n;
+ document.getElementById('sceneTitle').innerText=s.title;
+ document.getElementById('sceneMessage').innerText=s.message;
+ document.getElementById('scenePopup').classList.add('show');
+}
+function closeScene(){
+ document.getElementById('scenePopup').classList.remove('show');
+}
+function answer(message){
+ document.getElementById('answer').innerText=message;
+}
+function revealLetter(){
+ const l=document.getElementById('letter');
+ l.classList.add('show','reveal');
+}
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape')closeScene();
+});
+
+// Floating cinematic particles
+for(let i=0;i<16;i++){
+ const heart=document.createElement('div');
+ heart.className='floating';
+ heart.innerText='♥';
+ heart.style.left=Math.random()*100+'vw';
+ heart.style.animationDelay=(Math.random()*9)+'s';
+ heart.style.animationDuration=(7+Math.random()*8)+'s';
+ heart.style.fontSize=(10+Math.random()*15)+'px';
+ document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
